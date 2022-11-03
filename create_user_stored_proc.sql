@@ -4,7 +4,11 @@ use database btech;
 create schema utils;
 
 // grant privileges
-use role btech_administrator_role;
+use role securityadmin;
+grant usage on database btech to role securityadmin;
+grant usage, create procedure on schema btech.utils to role securityadmin;
+
+use schema btech.utils;
 
 // create stored procedure for users
 create or replace procedure btech.utils.create_user(first_name varchar,
