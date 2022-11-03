@@ -50,6 +50,8 @@ create or replace procedure btech.utils.create_user(name varchar,
                                                     default_role varchar,
                                                     default_warehouse varchar)
     returns varchar
+    
+
     language sql
     execute as caller
     as
@@ -71,3 +73,6 @@ create or replace procedure btech.utils.create_user(name varchar,
             
             return 'User ' || :user_name || ' created.';
         end;
+        
+        
+     // ciao sono raul
